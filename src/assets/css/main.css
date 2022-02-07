@@ -1,0 +1,157 @@
+/*
+  Custom Properties
+*/
+
+:root {
+  --mobile-breakpoint: 375px;
+  --desktop-breakpoint: 1024px;
+
+  --clr-red-300: 356, 100%, 66%;
+  --clr-red-200: 355, 100%, 74%;
+  --clr-blue-700: 208, 49%, 24%;
+
+  --clr-white: 0, 0%, 100%;
+  --clr-blue-gray-400: 240, 2%, 79%;
+  --clr-blue-gray-600: 207, 13%, 34%;
+  --clr-blue-gray-900: 240, 10%, 16%;
+
+  --ff-overpass: "Overpass", sans-serif;
+  --ff-ubuntu: "Ubuntu", sans-serif;
+}
+
+/*
+  CSS RESET
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+  Utility Classes
+*/
+
+.bg-white { 
+  background: var(--clr-white);
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-ubuntu {
+  font-family: var(--ff-ubuntu);
+}
+
+.font-overpass {
+  font-family: var(--ff-overpass);
+}
+
+.red-gradient {
+  background: rgb(255, 61, 80);
+  background: linear-gradient(
+    31deg,
+    rgba(255, 61, 80, 1) 0%,
+    rgba(255, 143, 112, 1) 100%
+  );
+}
+
+.blue-gradient {
+  background: rgb(44, 45, 63);
+  background: linear-gradient(
+    31deg,
+    rgba(44, 45, 63, 1) 0%,
+    rgba(63, 65, 100, 1) 100%
+  );
+}
+
+.text-white { 
+  color: hsl(var(--clr-white));
+}
+
+.text-cta { 
+  color: hsl(var(--clr-red-300));
+}
+
+.text-footer {
+  color: hsl(var(--clr-blue-gray-400));
+}
+
+.text-body { 
+  color: hsl(var(--clr-blue-gray-600));
+}
+
+.text-heading { 
+  color: hsl(var(--clr-blue-700))
+}
+
+.container { 
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.flex-center { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
